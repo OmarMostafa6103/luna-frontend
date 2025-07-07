@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+    font-family: poppins;
+}
+
+a.active hr {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width:640px) {
+    a.active {
+        background-color: #4c3731;
+        color: #ffffff;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes profileModalAnimation {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-profile-modal {
+    animation: profileModalAnimation 0.3s ease-in-out forwards;
+}
+
+.custom-scrollbar {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #777d61 #d0bfa9;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #d0bfa9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #777d61;
+
+    border-radius: 6px;
+}
