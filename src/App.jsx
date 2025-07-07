@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import ShopContextProvider from './context/ShopContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,6 +41,7 @@ const App = () => {
             <Route path="/orders" element={<Orders />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
 
